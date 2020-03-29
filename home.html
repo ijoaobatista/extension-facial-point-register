@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE Facial Point | Estação de Ponto</title>
+    <link rel="stylesheet" href="src/styles/libs/material-icons.css">
+    <link rel="stylesheet" href="src/styles/libs/materialize.css">
+    <link rel="stylesheet" href="src/styles/libs/animate.css">
+    <link rel="stylesheet" href="src/styles/home/product-sans-font.css">
+    <link rel="stylesheet" href="src/styles/home/style.css">
+</head>
+<body>
+
+    <audio style="visibility: hidden;" id="bateu-ponto" src="src/sounds/bateu-ponto.mp3"></audio>
+    <audio style="visibility: hidden;" id="nao-bateu-ponto" src="src/sounds/nao-bateu-ponto.mp3"></audio>
+
+    <div class="box-tracker">
+        <!-- Tracking -->
+        <canvas id="tracking-canvas" width="640" height="480"></canvas>
+        <div id="check-person"></div>
+    </div>
+
+    <!-- Para os container de video -->
+    <div class="body-video">
+        <!-- Webcam js -->
+        <div id="body-video"></div>
+    </div>
+
+    <!-- Menu cadastro -->
+    <ul id="menu-cadastro" class="dropdown-content">
+        <li><a href="#" class="grey-text text-darken-3">Cadastrar novo usuário</a></li>
+        <li><a href="#" class="grey-text text-darken-3">Área do administrador</a></li>
+        <li><a href="#" class="grey-text text-darken-3">Área do funcionário</a></li>
+        <li class="divider"></li>
+        <li><a href="#" class="grey-text text-darken-3">Ajuda</a></li>
+    </ul>
+
+    <div class="body">
+        <div class="row">
+            <div class="col s6 z-depth-5" style="height: 100vh" id="relogio-de-ponto">
+                <nav class="z-depth-0" id="nav-bar-ponto">
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo truncate" style="color: rgba(255, 255, 255, .7); font-size: 17px;">Empresa</a>
+                        <ul class="right">
+                            <li><a class="menu-register" href="#" data-activates="menu-cadastro"><i class="material-icons white-text">more_vert</i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="box-info">
+                    <h1 id="show-hour" class="white-text"></h1>
+                    <span id="show-day" class="white-text"></span>
+                    <img id="show-person" class="circle animated bounceIn" src="src/imgs/no-person.png">
+                    <p id="show-name" class="white-text">Funcionário</p>
+                </div>
+            </div>
+            <div class="col s6" style="height: 100vh">
+                <div id="area-ideal">
+                    <div id="marcation">
+                        <h2 class="white-text" id="instructions"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-splash">
+        <div class="box-center">
+            <img src="src/imgs/icons/icon_128.png" width="100" class="animated rotateIn circle z-depth-3">
+            <div class="body-login z-depth-3">
+                <div class="login-top">
+                    <h5 class="title-login">Estação de ponto</h5>
+                </div>
+                <div class="divider"></div>
+                <div class="login-content">
+                    <div class="row">
+                        <form class="col s12" id="login-para-sincronizar">
+                            <div class="row">
+                                <div class="input-wrapper">
+                                    <label for="cnpj">CNPJ</label>
+                                    <input type="text" class="browser-default" id="cnpj">
+                                </div>
+                                <div class="send-form-content">
+                                    <button id="send-login-org" class="hoverable sys-orange waves-effect btn-floating btn-large"><i class="material-icons">send</i></button>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" class="browser-default" id="senha">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="src/scripts/libs/jquery.js"></script>
+<script src="src/scripts/libs/materialize.min.js"></script>
+<script src="src/scripts/libs/face-api.min.js"></script>
+<script src="src/scripts/libs/webcam.min.js"></script>
+<script src="src/scripts/libs/camvas.js"></script>
+<script src="src/scripts/libs/pico.js"></script>
+<script src="src/scripts/home/script.js"></script>
+</body>
+</html>
+

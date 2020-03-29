@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+    "name": "THE Facial Point",
+    "short_name": "the_facial_point",
+    "description": "Relógio de ponto digital por meio da biometria facial.",
+    "version": "1.0.0",
+    "icons": {
+        "16": "src/imgs/icons/icon_16.png",
+        "32": "src/imgs/icons/icon_32.png",
+        "48": "src/imgs/icons/icon_48.png",
+        "128": "src/imgs/icons/icon_128.png"
+    },
+    "browser_action": {
+        "default_icons": {
+            "16": "src/imgs/icons/icon_16.png",
+            "32": "src/imgs/icons/icon_32.png",
+            "48": "src/imgs/icons/icon_48.png",
+            "128": "src/imgs/icons/icon_128.png"
+        },
+        "default_title": "THE Facial Point"
+    },
+    "background": {
+        "scripts": [
+            "src/scripts/libs/jquery.js",
+            "src/scripts/background/background.js"
+        ],
+        "persistent": false
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "homepage_url": "https://fierce-intelligence.000webhostapp.com/",
+    "offline_enabled": true,
+    "options_page": "option.html",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "background",
+        "cookies",
+        "geolocation",
+        "unlimitedStorage"
+    ]
+}
+
