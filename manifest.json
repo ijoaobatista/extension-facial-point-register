@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "THE Facial Point",
-    "short_name": "the_facial_point",
+    "name": "Facial Point",
+    "short_name": "facial_point",
     "description": "Relógio de ponto digital por meio da biometria facial.",
     "version": "1.0.0",
     "icons": {
@@ -27,8 +27,6 @@
         "persistent": false
     },
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-    "homepage_url": "https://fierce-intelligence.000webhostapp.com/",
-    "offline_enabled": true,
     "options_page": "option.html",
     "permissions": [
         "activeTab",
