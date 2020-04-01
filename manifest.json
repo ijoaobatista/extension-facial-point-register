@@ -17,14 +17,13 @@
             "48": "src/imgs/icons/icon_48.png",
             "128": "src/imgs/icons/icon_128.png"
         },
-        "default_title": "THE Facial Point"
+        "default_title": "Facial Point"
     },
     "background": {
         "scripts": [
             "src/scripts/libs/jquery.js",
             "src/scripts/background/background.js"
-        ],
-        "persistent": false
+        ]
     },
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "options_page": "option.html",
