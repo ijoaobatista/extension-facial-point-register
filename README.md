@@ -1,1 +1,0 @@
-# extension-facial-point-register
